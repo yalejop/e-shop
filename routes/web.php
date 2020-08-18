@@ -24,6 +24,8 @@ Route::post('products', 'ProductController@store')->name('products.store');
 
 Route::get('products/{product}', 'ProductController@show')->name('products.show');
 
+// Route::get('products/{product:title}', 'ProductController@show')->name('products.show');
+
 Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit');
 
 Route::match(['put', 'patch'], 'products/{product}', 'ProductController@update')->name('products.update');
