@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,7 @@ Route::get('products/{product}/edit', 'ProductController@edit')->name('products.
 Route::match(['put', 'patch'], 'products/{product}', 'ProductController@update')->name('products.update');
 
 Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
