@@ -10,7 +10,7 @@ $factory->define(Image::class, function (Faker $faker) {
     $fileName = $faker->numberBetween(1, 10) . '.jpg';
 
     return [
-        'path' => public_path("img/products/{$fileName}"),
+        'path' => "img/products/{$fileName}",
     ];
 });
 
@@ -18,6 +18,6 @@ $factory->state(Image::class, 'user', function (Faker $faker) {
     $fileName = $faker->numberBetween(1, 6) . '.jpg';
 
     return [
-        'path' => public_path("img/users/{$fileName}"),
+        'path' => "img/users/{$fileName}",
     ];
 });
